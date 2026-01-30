@@ -1,6 +1,6 @@
 # Oak
 
-DayZ internal — driver, injector, game DLL, and a small external ClickGUI panel to configure modules. This is a quick and buggy version;
+DayZ internal - driver, injector, game DLL, and a small external ClickGUI panel to configure modules. This is a quick and buggy version;
 
 ## Building
 
@@ -34,3 +34,7 @@ That loads the driver. Then start DayZ. To open the ClickGUI, run **OakPanel.exe
 - **src** — game DLL (DayZ internal)
 - **panel-csharp** — WPF control panel
 - **scripts** — `build_all.ps1`, etc.
+
+Credits: 
+- **[kdmapper](https://github.com/TheCruZ/kdmapper)**
+Used in the loader to map unsigned kernel drivers into memory via the vulnerable intel driver.

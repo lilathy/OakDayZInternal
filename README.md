@@ -10,6 +10,13 @@ From the repo root, run:
 .\scripts\build_all.ps1
 ```
 
+## Screenshots
+
+![ESP & Skeleton](1.png)
+
+![ClickGUI](2.png)
+
+
 You’ll need Visual Studio (with C++ and WDK for the driver), CMake, and .NET 8. The script builds the driver, injector, oak_loader, the game DLL, and the panel, then drops everything into `oak\bin`.
 
 ## Running
@@ -38,3 +45,5 @@ That loads the driver. Then start DayZ. To open the ClickGUI, run **OakPanel.exe
 Credits: 
 - **[kdmapper](https://github.com/TheCruZ/kdmapper)**
 Used in the loader to map unsigned kernel drivers into memory via the vulnerable intel driver.
+
+(Prebuilt custom driver, .dll, loader, injector, panel, panel .dll, panel dependencies, .net runtime config, windows sdk, and WinRT runtime are all in release.) Make sure to run powershell as admin or Windows will refuse to run the driver.

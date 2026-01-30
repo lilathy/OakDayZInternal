@@ -1,4 +1,0 @@
-C:/Users/jasd/Desktop/oak (2)/oak/injector/build/CMakeFiles/injector.dir
-C:/Users/jasd/Desktop/oak (2)/oak/injector/build/CMakeFiles/oak_loader.dir
-C:/Users/jasd/Desktop/oak (2)/oak/injector/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/jasd/Desktop/oak (2)/oak/injector/build/CMakeFiles/ZERO_CHECK.dir

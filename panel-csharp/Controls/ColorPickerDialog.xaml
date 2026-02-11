@@ -1,0 +1,122 @@
+<Window x:Class="OakPanel.Controls.ColorPickerDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Color Picker" Height="400" Width="350"
+        WindowStyle="None" ResizeMode="NoResize"
+        AllowsTransparency="True" Background="Transparent"
+        ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+    <Border Background="{StaticResource CardBrush}" CornerRadius="12" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" Padding="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+                                          
+            <Grid Grid.Row="0" Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Color Picker" FontSize="18" FontWeight="Bold" 
+                          Foreground="{StaticResource TextBrush}"/>
+                <Button Grid.Column="1" Content="✕" Width="32" Height="32" 
+                       Background="Transparent" 
+                       Foreground="{StaticResource TextDimBrush}"
+                       BorderThickness="0"
+                       Click="CloseButton_Click"
+                       Cursor="Hand"
+                       FontSize="16"
+                       Padding="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+            </Grid>
+            
+            <StackPanel Grid.Row="1">
+            
+                                                          
+            <Grid Margin="0,0,0,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                                                               
+                <Border Grid.Row="1" Background="Black" CornerRadius="8" Padding="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="120"/>
+                        </Grid.ColumnDefinitions>
+                        
+                                                  
+                        <Border Grid.Column="0" Background="White" CornerRadius="4" Margin="0,0,10,0">
+                            <Canvas x:Name="ColorCanvas" 
+                                   MouseMove="ColorCanvas_MouseMove" 
+                                   MouseDown="ColorCanvas_MouseDown"
+                                   Loaded="ColorCanvas_Loaded"
+                                   SizeChanged="ColorCanvas_SizeChanged">
+                                                                 
+                            </Canvas>
+                        </Border>
+                        
+                                     
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Hue" Foreground="{StaticResource TextDimBrush}" Margin="0,0,0,5"/>
+                            <Slider x:Name="HueSlider" Minimum="0" Maximum="360" 
+                                   ValueChanged="HueSlider_ValueChanged" 
+                                   Orientation="Vertical" Height="180"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                
+                               
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,10">
+                    <TextBlock Text="Value:" Foreground="{StaticResource TextDimBrush}" 
+                              VerticalAlignment="Center" Width="60"/>
+                    <Slider x:Name="ValueSlider" Minimum="0" Maximum="1" 
+                           ValueChanged="ValueSlider_ValueChanged" 
+                           Width="200" Margin="0,0,10,0"/>
+                </StackPanel>
+                
+                                        
+                <Border Grid.Row="3" x:Name="ColorPreview" 
+                       Background="{Binding SelectedColorBrush}" 
+                       Height="40" CornerRadius="8" 
+                       BorderBrush="{StaticResource BorderBrush}" 
+                       BorderThickness="1"/>
+            </Grid>
+            
+                         
+            <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="RGB: " Foreground="{StaticResource TextDimBrush}"/>
+                <TextBlock x:Name="RgbText" Grid.Column="1" Foreground="{StaticResource TextBrush}"/>
+            </Grid>
+            
+                      
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Border Background="{StaticResource AccentBrush}" CornerRadius="8" Margin="0,0,10,0">
+                    <Button Content="OK" Width="100" Height="35" 
+                           Background="Transparent"
+                           Foreground="White"
+                           BorderThickness="0"
+                           Click="OkButton_Click"/>
+                </Border>
+                <Border Background="{StaticResource CardHoverBrush}" CornerRadius="8">
+                    <Button Content="Cancel" Width="100" Height="35" 
+                           Background="Transparent"
+                           Foreground="{StaticResource TextBrush}"
+                           BorderThickness="0"
+                           Click="CancelButton_Click"/>
+                </Border>
+            </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

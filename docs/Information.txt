@@ -1,0 +1,71 @@
+base_address 00007FF7C4110000
+[Grabbing Offsets] Modbase World sig: 0x7FF7C41947BD | ptr: 0x7FF7C505B0A0 | val: 0x2479F038870 | offset: 0xF4B0A0
+[Grabbing Offsets] World BulletList sig: 0x7FF7C498D5E8 | offset: 0xE00
+[Grabbing Offsets] World NearEntList sig: 0x7FF7C498CB80 | offset: 0xF48
+[Grabbing Offsets] World FarEntList sig: 0x7FF7C498CC20 | offset: 0x1090
+[Grabbing Offsets] World Weather sig: 0x7FF7C4682247 | offset: 0x7458
+[Grabbing Offsets] World Camera sig: 0x7FF7C498DE9C | offset: 0x1B8
+[Grabbing Offsets] ItemInventory Quality sig: 0x7FF7C49BE27E | offset: 0x194
+[Grabbing Offsets] ItemInventory CargoGrid sig: 0x7FF7C4293987 | offset: 0x148
+[Grabbing Offsets] DayZPlayer sig: 0x7FF7C49099E1 | ptr: 0x7FF7C507D818 | val: 0x24B80A451C0 | offset: 0xF6D818
+[Grabbing Offsets] DayZPlayer Skeleton sig: 0x7FF7C45BEFE9 | offset: 0x7E8
+[Grabbing Offsets] DayZPlayer Inventory sig: 0x7FF7C454EAE7 | offset: 0x658
+[Grabbing Offsets] DayZInfected Skeleton sig: 0x7FF7C458D8AF | offset: 0x678
+[Grabbing Offsets] VisualState InverseTransform sig: 0x7FF7C48715E7 | offset: 0xA4
+File exists!
+[Grabbing Offsets] Camera - ViewMatrix sig: 0x7FF7C483D0DF | offset: 0x8
+[Grabbing Offsets] Camera - ViewPortMatrix sig: 0x7FF7C45CB6D3 | offset: 0x58
+[Grabbing Offsets] VisualState - Transform sig: 0x7FF7C483D0DF | offset: 0x8
+[Grabbing Offsets] Human - VisualState sig: 0x7FF7C45D42DC | offset: 0x1C8
+[Grabbing Offsets] Human - HumanType sig: 0x7FF7C453CF1D | offset: 0x180
+[Grabbing Offsets] offset_HumanType - ObjectName sig: 0x7FF7C4394448 | offset: 0x70
+loaded map texture!
+
+#define OFF_TEXT				0x10
+#define OFF_LENGTH				0x8
+#define OFF_WORLD				0xF4B0A0
+#define OFF_ITEMTABLE			0x2060
+#define OFF_QUALITY				0x194
+#define OFF_NEAR_ENTITY_TABLE	0xF48
+#define OFF_FAR_ENTITY_TABLE	0x1090
+#define OFF_SLOW_ENTITY_TABLE	0x2010
+#define OFF_NETWORK				0x6E4 
+//BONES
+#define OFF_ANIM_CLASS			0xB0
+#define OFF_MATRIX				0xBF0    
+#define OFF_PVISUAL				0x1C8 
+#define OFF_SKELETON_PLAYER     0x7E8
+#define OFF_SKELETON_ZOMBIE     0x678 
+#define OFF_PLAYER_HEAD			49
+#define OFF_PLAYER_BODY			24
+#define OFF_ZOMBIE_HEAD			22
+#define OFF_ZOMBIE_BODY			17
+ 
+#define OFF_SPEEDHACK 0xF19418
+ 
+#define O_NETWORK_MANAGER 0xF5E1E0
+#define O_NETWORK_CLIENT 0x50
+ 
+#define O_NETWORK_SCOREBOARD 0x18 // 0x18
+#define O_NETWORK_PLAYERCOUNT 0x10
+#define O_NETWORK_SCOREBOARD_ID 0x30 //0x30
+ 
+#define O_SCOREBOARD_SIZE 0x8 // 0x1C wtf idiot?
+#define O_SCOREBOARD_NAME 0xF8 // 0xF8
+ 
+#define OFF_DAYZPLAYER 0xF6D818
+#define OFF_PLAYER_INVENTORY 0x658
+#define	OFF_PLAYER_INVENTORY_HANDS 0x1B0
+ 
+#define OFF_EYE_ACCOM 0x2974 
+#define OFF_LATITUDE 0x2978 
+ 
+#define OFF_AMMO_TYPE1 0x6B0
+#define OFF_AMMO_TYPE2 0x20
+#define OFF_INIT_SPEED 0x364 
+#define OFF_AIRFRICTION 0x3B4 
+ 
+ 
+#define Function_GetBonePosition_OFF	0x8C51D0 //GetBonePositionWS   2
+#define Function_GetBoneIndexByName_OFF 0x4739A0 //GetBoneIndexByName  2
+
